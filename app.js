@@ -34,4 +34,4 @@ const location = document.getElementById("clientLocation").value;
 
 document.getElementById("clientResult").textContent =
 "Client saved: " + name + " | " + phone + " | " + location;
-}
+
