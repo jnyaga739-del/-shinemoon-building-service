@@ -20,6 +20,18 @@ const name = document.getElementById("clientName").value;
 const phone = document.getElementById("clientPhone").value;
 const location = document.getElementById("clientLocation").value;
 
+const list = document.getElementById("clientList");
+const item = document.createElement("li");
+
+item.textContent = name + " - " + phone + " - " + location;
+list.appendChild(item);
+
+document.getElementById("clientResult").textContent = "Client added successfully.";
+}
+const name = document.getElementById("clientName").value;
+const phone = document.getElementById("clientPhone").value;
+const location = document.getElementById("clientLocation").value;
+
 document.getElementById("clientResult").textContent =
 "Client saved: " + name + " | " + phone + " | " + location;
 }
