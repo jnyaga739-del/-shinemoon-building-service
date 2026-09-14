@@ -1,0 +1,38 @@
+let clients = JSON.parse(localStorage.getItem("clients")) || [];
+
+const clientName = document.querySelectorAll("input")[0];
+const clientPhone = document.querySelectorAll("input")[1];
+const clientLocation = document.querySelectorAll("input")[2];
+const saveClientBtn = document.querySelectorAll("button")[6];
+
+function updateDashboard() {
+  document.getElementById("clientsCount").textContent = clients.length;
+}
+
+updateDashboard();
+
+saveClientBtn.onclick = function () {
+  if (
+    clientName.value === "" ||
+    clientPhone.value === "" ||
+    clientLocation.value === ""
+  ) {
+    alert("Please fill all client details.");
+    return;
+  }
+
+  clients.push({
+    name: clientName.value,
+    phone: clientPhone.value,
+    location: clientLocation.value
+  });
+
+  localStorage.setItem("clients", JSON.stringify(clients));
+  updateDashboard();
+
+  alert("Client saved successfully!");
+
+  clientName.value = "";
+  clientPhone.value = "";
+  clientLocation.value = "";
+};
