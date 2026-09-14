@@ -1,54 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
   <title>ShineMoon Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><h1>ShineMoon Company</h1>
+<p>Building Service Management System</p><h2>Dashboard</h2><button>Clients</button>
+<button>Projects</button>
+<button>Workers</button>
+<button>Materials</button>
+<button>Payments</button>
+<button>Invoices</button>
 
-  <h1>ShineMoon Company</h1>
-  <p>Building Service Management System</p>
-
-  <h2>Dashboard</h2>
-
-  <button>Clients</button>
-  <button>Projects</button>
-  <button>Workers</button>
-  <button>Materials</button>
-  <button>Payments</button>
-  <button>Invoices</button>
-
-  <p><strong>Total Projects:</strong> 0</p>
-  <p><strong>Total Clients:</strong> 0</p>
-  <p><strong>Total Revenue:</strong> KSh 0</p>
-
-  <h2>Register Client</h2>
-
-  <input id="clientName" type="text" placeholder="Client Name">
-  <input id="clientPhone" type="text" placeholder="Phone Number">
-  <input id="clientLocation" type="text" placeholder="Location">
-
-  <button onclick="addClient()">Save Client</button>
-
-  <p id="clientResult"></p>
-
-  <h3>Client List</h3>
-  <ul id="clientList"></ul>
-
-  <h2>Register Project</h2>
-
-  <input id="projectName" type="text" placeholder="Project Name">
-  <input id="projectLocation" type="text" placeholder="Project Location">
-  <input id="projectBudget" type="number" placeholder="Budget (KSh)">
-
-  <button onclick="addProject()">Save Project</button>
-
-  <p id="projectResult"></p>
-
-  <h3>Project List</h3>
-  <ul id="projectList"></ul>
-
-  <script src="app.js"></script>
-
-</body>
-</html>
+<p><strong>Total Projects:</strong> 0</p>
+<p><strong>Total Clients:</strong> 0</p>
+<p><strong>Total Revenue:</strong> KSh 0</p><h2>Register Client</h2>
+<input id="clientName" type="text" placeholder="Client Name">
+<input id="clientPhone" type="text" placeholder="Phone Number">
+<input id="clientLocation" type="text" placeholder="Location">
+<button onclick="addClient()">Save Client</button>
+<p id="clientResult"></p>
+<h3>Client List</h3>
+<ul id="clientList"></ul><h2>Register Project</h2>
+<input id="projectName" type="text" placeholder="Project Name">
+<input id="projectLocation" type="text" placeholder="Project Location">
+<input id="projectBudget" type="number" placeholder="Budget (KSh)">
+<button onclick="addProject()">Save Project</button>
+<p id="projectResult"></p>
+<h3>Project List</h3>
+<ul id="projectList"></ul><h2>Register Worker</h2>
+<input id="workerName" type="text" placeholder="Worker Name">
+<input id="workerPhone" type="text" placeholder="Phone Number">
+<input id="workerRole" type="text" placeholder="Job Role">
+<input id="workerWage" type="number" placeholder="Daily Wage (KSh)">
+<button onclick="addWorker()">Save Worker</button>
+<p id="workerResult"></p>
+<h3>Worker List</h3>
+<ul id="workerList"></ul><script src="app.js"></script></body>
+  </html>
