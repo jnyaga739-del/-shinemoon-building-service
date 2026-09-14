@@ -1,38 +1,49 @@
 let clients = JSON.parse(localStorage.getItem("clients")) || [];
+let revenue = 0;
 
-const clientName = document.querySelectorAll("input")[0];
-const clientPhone = document.querySelectorAll("input")[1];
-const clientLocation = document.querySelectorAll("input")[2];
+const inputs = document.querySelectorAll("input");
 const saveClientBtn = document.querySelectorAll("button")[6];
 
 function updateDashboard() {
   document.getElementById("clientsCount").textContent = clients.length;
+  document.getElementById("revenueCount").textContent = revenue;
+}
+
+function showClients() {
+  const list = document.querySelector("h3");
+  list.innerHTML = "<b>Client List</b><br><br>";
+
+  clients.forEach((client) => {
+    list.innerHTML += `
+      ${client.name}<br>
+      📞 ${client.phone}<br>
+      📍 ${client.location}<br><br>
+    `;
+  });
 }
 
 updateDashboard();
+showClients();
 
 saveClientBtn.onclick = function () {
-  if (
-    clientName.value === "" ||
-    clientPhone.value === "" ||
-    clientLocation.value === ""
-  ) {
-    alert("Please fill all client details.");
+  const name = inputs[0].value;
+  const phone = inputs[1].value;
+  const location = inputs[2].value;
+
+  if (!name || !phone || !location) {
+    alert("Fill all client details");
     return;
   }
 
-  clients.push({
-    name: clientName.value,
-    phone: clientPhone.value,
-    location: clientLocation.value
-  });
-
+  clients.push({ name, phone, location });
   localStorage.setItem("clients", JSON.stringify(clients));
+
   updateDashboard();
+  showClients();
+
+  inputs[0].value = "";
+  inputs[1].value = "";
+  inputs[2].value = "";
 
   alert("Client saved successfully!");
-
-  clientName.value = "";
-  clientPhone.value = "";
-  clientLocation.value = "";
 };
