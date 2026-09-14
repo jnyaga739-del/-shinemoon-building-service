@@ -1,35 +1,60 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  margin: 0;
-  padding: 20px;
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f4f7;
+    margin:0;
+    padding:15px;
 }
 
-h1 {
-  color: #0f766e;
-  text-align: center;
+.header{
+    background:#0b8f4d;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
 }
 
-p {
-  text-align: center;
+.logo{
+    font-size:28px;
+    font-weight:bold;
 }
 
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-bottom:20px;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  background: #16a34a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
+.card{
+    background:#16a34a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+button{
+    width:100%;
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    margin:6px 0;
+    font-size:16px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+
+h2,h3{
+    color:#0b8f4d;
 }
