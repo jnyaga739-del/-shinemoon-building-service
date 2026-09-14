@@ -1,64 +1,80 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>ShineMoon Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShineMoon Company</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
 <header class="header">
-    <div class="logo">🌙 ShineMoon Company</div>
-    <p>Building Service Management System</p>
+  <div class="logo">🌙 ShineMoon Company</div>
+  <p>Building Service Management System</p>
 </header>
 
 <section class="stats">
-    <div class="card">
-        <h3 id="clientsCount">0</h3>
-        <p>Clients</p>
-    </div>
+  <div class="card">
+    <h3 id="clientsCount">0</h3>
+    <p>Clients</p>
+  </div>
 
-    <div class="card">
-        <h3 id="projectsCount">0</h3>
-        <p>Projects</p>
-    </div>
+  <div class="card">
+    <h3 id="projectsCount">0</h3>
+    <p>Projects</p>
+  </div>
 
-    <div class="card">
-        <h3 id="workersCount">0</h3>
-        <p>Workers</p>
-    </div>
+  <div class="card">
+    <h3 id="workersCount">0</h3>
+    <p>Workers</p>
+  </div>
 
-    <div class="card">
-        <h3>KSh <span id="revenueCount">0</span></h3>
-        <p>Total Revenue</p>
-    </div>
-</section><button>Projects</button>
+  <div class="card">
+    <h3>KSh <span id="revenueCount">0</span></h3>
+    <p>Total Revenue</p>
+  </div>
+</section>
+
+<h2>Dashboard</h2>
+
+<button>Clients</button>
+<button>Projects</button>
 <button>Workers</button>
 <button>Materials</button>
 <button>Payments</button>
 <button>Invoices</button>
 
-<p><strong>Total Projects:</strong> 0</p>
-<p><strong>Total Clients:</strong> 0</p>
-<p><strong>Total Revenue:</strong> KSh 0</p><h2>Register Client</h2>
-<input id="clientName" type="text" placeholder="Client Name">
-<input id="clientPhone" type="text" placeholder="Phone Number">
-<input id="clientLocation" type="text" placeholder="Location">
-<button onclick="addClient()">Save Client</button>
-<p id="clientResult"></p>
+<h2>Register Client</h2>
+
+<input type="text" placeholder="Client Name">
+<input type="text" placeholder="Phone Number">
+<input type="text" placeholder="Location">
+
+<button>Save Client</button>
+
 <h3>Client List</h3>
-<ul id="clientList"></ul><h2>Register Project</h2>
-<input id="projectName" type="text" placeholder="Project Name">
-<input id="projectLocation" type="text" placeholder="Project Location">
-<input id="projectBudget" type="number" placeholder="Budget (KSh)">
-<button onclick="addProject()">Save Project</button>
-<p id="projectResult"></p>
+
+<h2>Register Project</h2>
+
+<input type="text" placeholder="Project Name">
+<input type="text" placeholder="Project Location">
+<input type="number" placeholder="Budget (KSh)">
+
+<button>Save Project</button>
+
 <h3>Project List</h3>
-<ul id="projectList"></ul><h2>Register Worker</h2>
-<input id="workerName" type="text" placeholder="Worker Name">
-<input id="workerPhone" type="text" placeholder="Phone Number">
-<input id="workerRole" type="text" placeholder="Job Role">
-<input id="workerWage" type="number" placeholder="Daily Wage (KSh)">
-<button onclick="addWorker()">Save Worker</button>
-<p id="workerResult"></p>
+
+<h2>Register Worker</h2>
+
+<input type="text" placeholder="Worker Name">
+<input type="text" placeholder="Phone Number">
+<input type="text" placeholder="Job Role">
+<input type="number" placeholder="Daily Wage (KSh)">
+
+<button>Save Worker</button>
+
 <h3>Worker List</h3>
-<ul id="workerList"></ul>
 
 <script src="script.js"></script>
 </body>
